@@ -1,6 +1,7 @@
+import { User } from 'src/users/user.entity';
+
 export interface JwtPayload {
-  sub: string;
+  user: Pick<User, 'id' | 'email'>;
   exp: number;
-  email: string;
   iat: number;
 }

@@ -1,20 +1,29 @@
-### Get root
+
+
+### root
 GET http://localhost:3000/
 
 
-### User register
+### user_register
 POST http://localhost:3000/user/register 
 Content-Type: application/json
 
-{"email": "john@doe.com", "password": "changeme"}
+{"email": "john@doe.com", "password": "ChangeMe1234#"}
 
 
-### Auth login
+### auth_login
+# @name auth_login
 POST http://localhost:3000/auth/login 
 Content-Type: application/json
 
 {"email": "john@doe.com", "password": "changeme"}
 
-### Auth info
+###
+@access_token = {{auth_login.response.body.access_token}}
+
+
+
+### auth_info
 GET http://localhost:3000/auth/info 
 Authorization: Bearer {{access_token}}
+
