@@ -1,0 +1,20 @@
+### Get root
+GET http://localhost:3000/
+
+
+### User register
+POST http://localhost:3000/user/register 
+Content-Type: application/json
+
+{"email": "john@doe.com", "password": "changeme"}
+
+
+### Auth login
+POST http://localhost:3000/auth/login 
+Content-Type: application/json
+
+{"email": "john@doe.com", "password": "changeme"}
+
+### Auth info
+GET http://localhost:3000/auth/info 
+Authorization: Bearer {{access_token}}
