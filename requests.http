@@ -27,3 +27,14 @@ Content-Type: application/json
 GET http://localhost:3000/auth/info 
 Authorization: Bearer {{access_token}}
 
+
+### todos_list
+GET http://localhost:3000/todos
+Authorization: Bearer {{access_token}}
+
+### todos_add
+POST http://localhost:3000/todos
+Authorization: Bearer {{access_token}}
+Content-Type: application/json
+
+{"content": "My todo item"}

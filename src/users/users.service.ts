@@ -15,7 +15,7 @@ export class UsersService {
     return await this.usersRepository.findOneBy({ email });
   }
 
-  async create(registerDto: RegisterDto): Promise<Omit<User, 'password'>> {
+  async create(registerDto: RegisterDto): Promise<Pick<User, 'id' | 'email'>> {
     if (await this.findOne(registerDto.email)) {
       throw new BadRequestException('Email is already taken');
     }
