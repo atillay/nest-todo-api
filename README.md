@@ -12,3 +12,7 @@ We need the following features:
   - Delete todo
 - Each todo must be linked to the user that created it
 - Bonus : be able to sort todos
+
+### API documentation
+
+See : [requests.http](requests.http)
